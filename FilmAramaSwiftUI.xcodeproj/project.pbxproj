@@ -7,18 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD20A7A82AA2545400D31F5F /* FilmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20A7A72AA2545400D31F5F /* FilmViewModel.swift */; };
 		CD428C4B2A9E791F0060B487 /* FilmAramaSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD428C4A2A9E791F0060B487 /* FilmAramaSwiftUIApp.swift */; };
-		CD428C4D2A9E791F0060B487 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD428C4C2A9E791F0060B487 /* ContentView.swift */; };
+		CD428C4D2A9E791F0060B487 /* FilmListeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD428C4C2A9E791F0060B487 /* FilmListeView.swift */; };
 		CD428C4F2A9E79200060B487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD428C4E2A9E79200060B487 /* Assets.xcassets */; };
 		CD428C522A9E79200060B487 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD428C512A9E79200060B487 /* Preview Assets.xcassets */; };
+		CD428C5D2A9E79E80060B487 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD428C5C2A9E79E80060B487 /* Film.swift */; };
+		CD50C7B62A9F617A0028106B /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD50C7B52A9F617A0028106B /* DownloaderClient.swift */; };
+		CD70A99D2AE7FAE900371B93 /* ImageDownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70A99C2AE7FAE900371B93 /* ImageDownloaderClient.swift */; };
+		CD70A99F2AE7FCA300371B93 /* OzelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70A99E2AE7FCA300371B93 /* OzelImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD20A7A72AA2545400D31F5F /* FilmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewModel.swift; sourceTree = "<group>"; };
 		CD428C472A9E791F0060B487 /* FilmAramaSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmAramaSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD428C4A2A9E791F0060B487 /* FilmAramaSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAramaSwiftUIApp.swift; sourceTree = "<group>"; };
-		CD428C4C2A9E791F0060B487 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD428C4C2A9E791F0060B487 /* FilmListeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListeView.swift; sourceTree = "<group>"; };
 		CD428C4E2A9E79200060B487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD428C512A9E79200060B487 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD428C5C2A9E79E80060B487 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		CD50C7B52A9F617A0028106B /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
+		CD50C7B72A9F91F40028106B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD70A99C2AE7FAE900371B93 /* ImageDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClient.swift; sourceTree = "<group>"; };
+		CD70A99E2AE7FCA300371B93 /* OzelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzelImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,12 @@
 		CD428C492A9E791F0060B487 /* FilmAramaSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				CD428C4A2A9E791F0060B487 /* FilmAramaSwiftUIApp.swift */,
-				CD428C4C2A9E791F0060B487 /* ContentView.swift */,
+				CD50C7B72A9F91F40028106B /* Info.plist */,
+				CD50C7B42A9F60F80028106B /* Service */,
+				CD428C5B2A9E79BD0060B487 /* App */,
+				CD428C5A2A9E79B30060B487 /* View */,
+				CD428C592A9E79A80060B487 /* ViewModel */,
+				CD428C582A9E79790060B487 /* Model */,
 				CD428C4E2A9E79200060B487 /* Assets.xcassets */,
 				CD428C502A9E79200060B487 /* Preview Content */,
 			);
@@ -65,6 +80,48 @@
 				CD428C512A9E79200060B487 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD428C582A9E79790060B487 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD428C5C2A9E79E80060B487 /* Film.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD428C592A9E79A80060B487 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD20A7A72AA2545400D31F5F /* FilmViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD428C5A2A9E79B30060B487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD428C4C2A9E791F0060B487 /* FilmListeView.swift */,
+				CD70A99E2AE7FCA300371B93 /* OzelImage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD428C5B2A9E79BD0060B487 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CD428C4A2A9E791F0060B487 /* FilmAramaSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CD50C7B42A9F60F80028106B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CD50C7B52A9F617A0028106B /* DownloaderClient.swift */,
+				CD70A99C2AE7FAE900371B93 /* ImageDownloaderClient.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD428C4D2A9E791F0060B487 /* ContentView.swift in Sources */,
+				CD428C4D2A9E791F0060B487 /* FilmListeView.swift in Sources */,
+				CD428C5D2A9E79E80060B487 /* Film.swift in Sources */,
+				CD70A99F2AE7FCA300371B93 /* OzelImage.swift in Sources */,
+				CD20A7A82AA2545400D31F5F /* FilmViewModel.swift in Sources */,
 				CD428C4B2A9E791F0060B487 /* FilmAramaSwiftUIApp.swift in Sources */,
+				CD50C7B62A9F617A0028106B /* DownloaderClient.swift in Sources */,
+				CD70A99D2AE7FAE900371B93 /* ImageDownloaderClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +331,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FilmAramaSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FilmAramaSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +360,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FilmAramaSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FilmAramaSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
