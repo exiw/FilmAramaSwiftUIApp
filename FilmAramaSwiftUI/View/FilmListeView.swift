@@ -23,23 +23,28 @@ struct FilmListeView: View {
             
             VStack{
                 TextField("Aranacak Film", text: $aranacakFilm, onEditingChanged:{ _ in }, onCommit: {
-                        self.filmListeViewModel.filmAramasiYap(filmIsmi: aranacakFilm)
+                        self.filmListeViewModel
+                        .filmAramasiYap(filmIsmi: aranacakFilm.trimmingCharacters(in: .whitespacesAndNewlines).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? aranacakFilm)
                 }).padding().textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 List(filmListeViewModel.filmler, id: \.imdbId){ filmm in
-                    HStack(alignment: .top) {
-                        OzelImage(url: filmm.poster)
-                            .frame(width: 100,height: 150)
-                        VStack{
-                            Text(filmm.title)
-                                .font(.title3)
-                                .foregroundColor(.blue)
-                            
-                            
-                            Text(filmm.year)
-                                .foregroundColor(.orange)
+                    NavigationLink(destination: DetayView(imdbId: filmm.imdbId),
+                    label: {
+                        HStack(alignment: .top) {
+                            OzelImage(url: filmm.poster)
+                                .frame(width: 100,height: 150)
+                            VStack{
+                                Text(filmm.title)
+                                    .font(.title3)
+                                    .foregroundColor(.blue)
+                                
+                                
+                                Text(filmm.year)
+                                    .foregroundColor(.orange)
+                            }
                         }
-                    }
+                    })
+                    
                 }.navigationTitle(Text("Film Kitabı"))
 
             }
