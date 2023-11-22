@@ -41,6 +41,7 @@ struct FilmListeView: View {
                                 
                                 Text(filmm.year)
                                     .foregroundColor(.orange)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
                             }
                         }
                     })
